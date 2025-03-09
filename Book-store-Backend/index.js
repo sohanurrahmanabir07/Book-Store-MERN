@@ -48,8 +48,7 @@ const verifyToken = async (req, res, next) => {
 };
 
 // Routes
-app.get('/hello', (req, res) => res.send('hello'));
-app.post('/hello', verifyToken, (req, res) => res.send(req.user));
+app.get('/', (req, res) => res.send('hello'));
 
 app.post('/verify', (req, res) => {
     jwt.verify(req.body.token, process.env.SECRET, (err, decoded) => {
