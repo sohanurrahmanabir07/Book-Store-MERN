@@ -19,7 +19,7 @@ const cors = require('cors')
 const CookieParser = require('cookie-parser')
 app.use(cors(
     {
-        origin: ['https://book-store-mern-rouge.vercel.app'],
+        origin: ['https://book-store-mern-rouge.vercel.app','http://localhost:5173'],
         credentials: true
     }
 ))
@@ -98,6 +98,10 @@ const verification_token = async (req, res, next) => {
 
 
 }
+
+app.get('/hello',(req,res)=>{
+    res.send('hello')
+})
 app.post('/hello', verification_token, (req, res) => {
     console.log(req.user)
 })
