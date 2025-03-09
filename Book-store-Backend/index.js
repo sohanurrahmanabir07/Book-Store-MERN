@@ -3,7 +3,7 @@ require('dotenv').config();
 const cors = require('cors');
 const cookieParser = require('cookie-parser');
 const jwt = require('jsonwebtoken');
-const bcrypt = require('bcrypt');
+const bcrypt = require('bcryptjs');
 const { MongoClient, ServerApiVersion, ObjectId } = require('mongodb');
 
 const app = express();
@@ -12,7 +12,7 @@ const saltRounds = 10;
 
 // Middleware
 app.use(cors({
-    origin:  '*',
+    origin:  'http://localhost:5173',
     credentials: true
 }));
 app.use(express.json());
