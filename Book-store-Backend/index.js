@@ -12,7 +12,7 @@ const saltRounds = 10;
 
 // Middleware
 app.use(cors({
-    origin: [process.env.URL],
+    origin:  '*',
     credentials: true
 }));
 app.use(express.json());
