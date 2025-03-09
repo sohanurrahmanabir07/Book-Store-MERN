@@ -63,7 +63,7 @@ export const Navbar = () => {
 
 
                                 {user.length == 0 ?
-                                    (<div className="navbar-end w-full bg-yellow-200 flex justify-between">
+                                    (<div className="navbar-end w-full justify-between">
                                         <a onClick={(e) => handleModal(e)} data-value='signup' className="btn bg-lime-500 text-white">Sign Up</a>
                                         <a onClick={(e) => handleModal(e)} data-value='signin' className="btn bg-cyan-500 ml-2 text-white">Sign In</a>
                                     </div>)
