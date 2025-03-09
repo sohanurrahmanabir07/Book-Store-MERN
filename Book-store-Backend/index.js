@@ -19,7 +19,7 @@ const cors = require('cors')
 const CookieParser = require('cookie-parser')
 app.use(cors(
     {
-        origin: ['http://localhost:5173'],
+        origin: ['https://book-store-mern-rouge.vercel.app'],
         credentials: true
     }
 ))
